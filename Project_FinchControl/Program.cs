@@ -252,7 +252,7 @@ namespace Project_FinchControl
                 finchRobot.setMotors(80, 100);
                 for (int lightSoundLevel = 0; lightSoundLevel < 100; lightSoundLevel++)
                 {
-                    finchRobot.setLED(lightSoundLevel, lightSoundLevel, lightSoundLevel);
+                    finchRobot.setLED(0, lightSoundLevel, lightSoundLevel);
                     finchRobot.noteOn(lightSoundLevel * 50);
                 }
                 finchRobot.setMotors(0, 100);
