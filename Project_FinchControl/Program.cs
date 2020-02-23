@@ -219,11 +219,13 @@ namespace Project_FinchControl
             DisplayScreenHeader("The Square");
 
             Console.WriteLine("\tThe Finch robot will now move in a square pattern!");
+            Console.WriteLine("How many seconds would you like it to spend on each side?");
+            int Duration = int.Parse(Console.ReadLine());
             DisplayContinuePrompt();
             for (int t = 1; t < 4; t++)
             { 
                 finchRobot.setMotors(80, 100);
-                System.Threading.Thread.Sleep(1500);
+                System.Threading.Thread.Sleep(Duration*1000);
                 finchRobot.setMotors(0, 100);
                 System.Threading.Thread.Sleep(1500);            
                 finchRobot.setMotors(0,0);
